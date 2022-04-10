@@ -1,6 +1,6 @@
 # Lab Report 1 Week 2
 
-**[Welcome!](https://youtu.be/dQw4w9WgXcQ)**
+**[Video Tutorial (JK)](https://youtu.be/dQw4w9WgXcQ)**
 
 >Installing VScode
 
