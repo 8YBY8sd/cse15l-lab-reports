@@ -24,17 +24,17 @@ https://sdacs.ucsd.edu/~icc/index.php
 
 If you forgot your password, here is document teaches you [How to reset your password](https://8yby8sd.github.io/cse15l-lab-reports/How-to-Reset-your-Password.pdf).
 
-After you get your account, go to Visual Studio Code and open a termainal (Ctrl + `, or use the Terminal → New Terminal menu option). Your command will look like this, but with the zz replaced by the letters in your course-specific account.
+After you get your account, go to Visual Studio Code and open a termainal (Ctrl + `, or use the Terminal → New Terminal menu option). Your command will look like this, but with the aub replaced by the letters in your course-specific account.
 
 ```
-$ ssh cs15lsp22zz@ieng6.ucsd.edu
+$ ssh cs15lsp22aub@ieng6.ucsd.edu
 ```
 
 (That’s one, five, l (lowercase L))
 
 Since this is first time you’ve connected to this server, you will probably get a message like this:
 ```
-⤇ ssh cs15lsp22zz@ieng6.ucsd.edu
+⤇ ssh cs15lsp22aub@ieng6.ucsd.edu
 
 The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
 
@@ -45,12 +45,12 @@ Are you sure you want to continue connecting
 (yes/no/[fingerprint])?
 ```
 
-Say yes to these messages when you are connecting to a new server for the first time; it’s expected to get this message in that case.
+Say yes to these messages when you are connecting to a new server for the first time.
 
 So type yes and press enter, then give your password; the whole interaction should look something like this once you give your password and are logged in:
 
 ```
-⤇ ssh cs15lsp22zz@ieng6.ucsd.edu
+⤇ ssh cs15lsp22aub@ieng6.ucsd.edu
 
 The authenticity of host 'ieng6-202.ucsd.edu (128.54.70.227)' can't be established.
 
@@ -62,7 +62,7 @@ Password:
 
 Last login: Sun Jan 2 14:03:05 2022 from 107-217-10-235.lightspeed.sndgca.sbcglobal.net
 quota: No filesystem specified.
-Hello cs15lsp22zz, you are currently logged into
+Hello cs15lsp22aub, you are currently logged into
 ieng6-203.ucsd.edu
 
 
@@ -82,7 +82,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lsp22
 
 If you're not the first time to connect this server, your terminal should looks like this after you enter the password:![Image](https://8yby8sd.github.io/cse15l-lab-reports/sshlogin.png)
 
-Now your terminal is connected to a computer in the CSE basement, and any commands you run will run on that computer. We call your computer the client and the computer in the basement the server based on how you are connected.
+Now your terminal is connected to server.
 
 >Trying Some Commands
 
@@ -116,7 +116,7 @@ class WhereAmI {
 Then, in the terminal from the directory where you made this file, run this command.
 
 ```
-scp WhereAmI.java cs15lsp22zz@ieng6.ucsd.edu:~/
+scp WhereAmI.java cs15lsp22aub@ieng6.ucsd.edu:~/
 ```
 Then, log into server with ssh again, and use ls. You should see something looks like this:![Image](https://8yby8sd.github.io/cse15l-lab-reports/scpWhereAmI.png)
 
@@ -124,8 +124,6 @@ Then, log into server with ssh again, and use ls. You should see something looks
 >Setting an SSH Key
 
 Let's set a ssh keys to save your life. If you have ssh keys, you don't need to enter the password every single time. 
-
-The idea behind ssh keys is that a program, called ssh-keygen, creates a pair of files called the public key and private key. You copy the public key to a particular location on the server, and the private key in a particular location on the client. Then, the ssh command can use the pair of files in place of your password. 
 
 Let me show you some magic:
 ```
@@ -163,13 +161,13 @@ The key's randomart image is:
 This created two new files on your system; the private key (in a file id_rsa) and the public key (in a file id_rsa.pub), stored in the .ssh directory on your computer.
 Now we need to copy the public key to the .ssh directory of your user account on the server.
 ```
-$ ssh cs15lsp22zz@ieng6.ucsd.edu
+$ ssh cs15lsp22aub@ieng6.ucsd.edu
 <Enter Password>
 # now on server
 $ mkdir .ssh
 $ <logout>
 # back on client
-$ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/authorized_keys
+$ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22aub@ieng6.ucsd.edu:~/.ssh/authorized_keys
 # You use your username and the path you saw in the command above
 ```
 
