@@ -2,7 +2,7 @@
 
 Implement all Group Choice Options (1-3) from Lab 5
 
->> Streamlining ssh Configuration
+## Streamlining ssh Configuration
 
 > Show my .ssh/config file, and how I edited it (with VScode,
 another program, etc)
@@ -33,7 +33,7 @@ Using an `scp` command copying a file which named "labReport3Part1.txt" to my ac
 
 ---
 
->> Setup Github Access from ieng6
+## Setup Github Access from ieng6
 
 > Show where the public key I made is stored on Github and in my user account (screenshot).
 
@@ -65,7 +65,7 @@ After that, `git commit -m "<commands you want to write>"` to commit and `git pu
 
 ---
 
->> Copy whole directories with `scp -r`
+## Copy whole directories with `scp -r`
 
 > Show copying my whole markdown-parse directory to my ieng6 account.
 
