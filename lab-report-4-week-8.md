@@ -14,6 +14,8 @@ Test three markdown snippets
 [`code]`](ucsd.edu)
 ```
 
+Run Snippet 1 
+
 
 > Snippet 2
 
