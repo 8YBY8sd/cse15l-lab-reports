@@ -2,9 +2,9 @@
 
 Test three markdown snippets
 
-[Link of my markdown-parse repository:](https://github.com/8YBY8sd/markdown-parse)
+[Link of my markdown-parse repository](https://github.com/8YBY8sd/markdown-parse)
 
-[Link of the one I reviewed in week 7:](https://github.com/rmccrystal/markdown-parser)
+[Link of the one I reviewed in week 7](https://github.com/rmccrystal/markdown-parser)
 
 > Snippet 1
 
