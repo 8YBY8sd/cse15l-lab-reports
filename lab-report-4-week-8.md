@@ -48,7 +48,7 @@ Test it in the one I reviewed in week 7: failure
 
 Small change:
 
-There is a small change (<10 lines>) that will make my program work for snippet 1 and all related cases that use inline code with backticks. we check that if there is have odd numbers of backticks inside of the "[" and "]", it would not print out the link.
+There is a small change (<10 lines>) that will make my program work for snippet 1 and all related cases that use inline code with backticks. It needs to check that if there is have odd numbers of backticks inside of the "[" and "]", it would not print out the link.
 
 ---
 
@@ -91,7 +91,7 @@ Test it in the one I reviewed in week 7: failure
 
 Small change:
 
-There is a small (<10 lines) code change that will make my program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets. First, it should print out the link from the "(" and ")" when there is a "(" and ")" after first "[" and "]" if it is valid in snippet 1. Second, if there are even numbers of "[", "]", "(", and ")" inside of "[" and "]", it should not print out the link after this "]" which is inside of "(" and ")".
+There is a small (<10 lines) code change that will make my program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets. First, it should print out the link from the "(" and ")" when there is a "(" and ")" after first "[" and "]" if it is valid in snippet 1. Second, if there are even numbers of "[", "]", "(", and ")" inside of "[" and "]", it should print out the link whick locate in the very middle of the this "[" and "]".
 
 ---
 
@@ -155,4 +155,4 @@ Test it in the one I reviewed in week 7: failure
 
 Small change:
 
-There is a small (<10 lines) code change that will make my program work for snippet 3 and all related cases that have newlines in brackets and parentheses. First, it needs to check there doesn't have one empty line after "(" or before ")". Second, it needs to check there doesn't have any space before the link. finally, it needs to check there doesn't have any empty lines between the middle of brackets and parentheses.
+There is a small (<10 lines) code change that will make my program work for snippet 3 and all related cases that have newlines in brackets and parentheses. First, it needs to check there doesn't have one empty line after "(" or before ")". Second, it needs to check there doesn't have any space before the link. Finally, it needs to check there doesn't have any empty lines between the middle of brackets and parentheses.
