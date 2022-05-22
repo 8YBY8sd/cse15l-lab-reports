@@ -46,6 +46,10 @@ Test it in my markdown-parse: failure
 Test it in the one I reviewed in week 7: failure
 ![snippet1othertest](https://8yby8sd.github.io/cse15l-lab-reports/snippet1othertest.png)
 
+Small change:
+
+There is a small change (<10 lines>) that will make my program work for snippet 1 and all related cases that use inline code with backticks. we check that if there is have odd numbers of backticks inside of the "[" and "]", it would not print out the link.
+
 ---
 
 > Snippet 2
@@ -67,8 +71,6 @@ markdown-parse should produce
 a.com, a.com, example.com
 ```
 
-
-
 The code in MarkdownParseTest.java for how I turned it into a test:
 ```
     @Test
@@ -86,6 +88,10 @@ Test it in my markdown-parse: failure
 
 Test it in the one I reviewed in week 7: failure
 ![snippet2othertest](https://8yby8sd.github.io/cse15l-lab-reports/snippet2othertest.png)
+
+Small change:
+
+There is a small (<10 lines) code change that will make my program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets. First, it should print out the link from the "(" and ")" when there is a "(" and ")" after first "[" and "]" if it is valid in snippet 1. Second, if there are even numbers of "[", "]", "(", and ")" inside of "[" and "]", it should not print out the link after this "]" which is inside of "(" and ")".
 
 ---
 
@@ -146,3 +152,7 @@ Test it in my markdown-parse: failure
 
 Test it in the one I reviewed in week 7: failure
 ![snippet3othertest](https://8yby8sd.github.io/cse15l-lab-reports/snippet3othertest.png)
+
+Small change:
+
+There is a small (<10 lines) code change that will make my program work for snippet 3 and all related cases that have newlines in brackets and parentheses. First, it needs to check there doesn't have one empty line after "(" or before ")". Second, it needs to check there doesn't have any space before the link. finally, it needs to check there doesn't have any empty lines between the middle of brackets and parentheses.
