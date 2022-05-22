@@ -18,22 +18,21 @@ Test three markdown snippets
 [`code]`](ucsd.edu)
 ```
 
-markdown-parse should produce:
+![snippet1](https://8yby8sd.github.io/cse15l-lab-reports/snippet1.png)
+
+![snippet1produce](https://8yby8sd.github.io/cse15l-lab-reports/snippet1produce.png)
+
+markdown-parse should produce: 
 
 ```
-[a link](url.com)
-
-another link`
-
-cod[e
-
-code]
+`google.com, google.com, ucsd.edu
 ```
+
 
 The code in MarkdownParseTest.java for how I turned it into a test:
 ```
     public void snippet1() throws IOException {
-        List<String> list = List.of("[a link](url.com)", "another link`", "cod[e", "code]");
+        List<String> list = List.of("`google.com", "google.com", "ucsd.edu");
         Path fileName = Path.of("snippet1.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
@@ -58,21 +57,23 @@ Test it in the one I reviewed in week 7: failure
 
 [some escaped \[ brackets \]](example.com)
 ```
+![snippet2](https://8yby8sd.github.io/cse15l-lab-reports/snippet2.png)
+
+![snippet2produce](https://8yby8sd.github.io/cse15l-lab-reports/snippet2produce.png)
 
 markdown-parse should produce
 
 ```
-[a nested link](b.com)
-
-a nested parenthesized url
-
-some escaped [ brackets ]
+a.com, a.com, example.com
 ```
+
+
+
 The code in MarkdownParseTest.java for how I turned it into a test:
 ```
     @Test
     public void snippet2() throws IOException {
-        List<String> list = List.of("[a nested link](b.com)", "a nested parenthesized url", "some escaped [ brackets ]");
+        List<String> list = List.of("a.com", "a.com", "example.com");
         Path fileName = Path.of("snippet2.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
@@ -116,32 +117,23 @@ And there's still some more text after that.
 
 And then there's more text
 ```
+![snippet3](https://8yby8sd.github.io/cse15l-lab-reports/snippet3.png)
+
+![snippet3produce](https://8yby8sd.github.io/cse15l-lab-reports/snippet3produce.png)
 
 markdown-parse should produce
 
 ```
-[this title text is really long and takes up more than one line
-
-and has some line breaks]( https://www.twitter.com )
-
-this title text is really long and takes up more than one line
-
-[this link doesn't have a closing parenthesis](github.com
-
-And there's still some more text after that.
-
-[this link doesn't have a closing parenthesis for a while](https://cse.ucsd.edu/
-
-)
-
-And then there's more text
+https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule
 ```
+
+
 
 The code in MarkdownParseTest.java for how I turned it into a test:
 ```
     @Test
     public void snippet3() throws IOException {
-        List<String> list = List.of("[this title text is really long and takes up more than one line", "and has some line breaks]( https://www.twitter.com )", "this title text is really long and takes up more than one line", "[this link doesn't have a closing parenthesis](github.com", "And there's still some more text after that.", "[this link doesn't have a closing parenthesis for a while](https://cse.ucsd.edu/", ")", "And then there's more text");
+        List<String> list = List.of("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule");
         Path fileName = Path.of("snippet3.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
