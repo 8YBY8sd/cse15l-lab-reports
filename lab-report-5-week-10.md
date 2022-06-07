@@ -22,9 +22,10 @@ my-markdown-parser implementation is wrong, and cse15lsp22-markdown-parser imple
 Here is VScode preview of the 139.md.
 ![labreport5139preview](https://8yby8sd.github.io/cse15l-lab-reports/labreport5139preview.png)
 
-The expected output should be `[]`because there doesn't have any links in this file.
+The expected output should be `[]` because there doesn't have any links in this file.
 
-Describe the bug: For my-markdown-parser, it doesn't return `[]` when it can't find any `[ ] ( )` in the test file. It doesn't have a condition that return `[]` if there dones't have any `[ ] ( )` in the test file.
+Describe the bug: 
+For my-markdown-parser, it doesn't return `[]` when it can't find any `[ ] ( )` in the test file. It doesn't have a condition that returns `[]` if there doesn't have any `[ ] ( )` in the test file.
 ![labreport5139bug.png](https://8yby8sd.github.io/cse15l-lab-reports/labreport5139bug.png)
 
 
@@ -38,7 +39,7 @@ For this one my-markdown-parser implementation is correct, but cse15lsp22-markdo
 Here is VScode preview of the 149.md.
 ![labreport5149preview](https://8yby8sd.github.io/cse15l-lab-reports/labreport5149preview.png)
 
-The expected output should be `[]`because there doesn't have any links in this file.
+The expected output should be `[]` because there doesn't have any links in this file.
 
-Describe the bug: For cse15lsp22-markdown-parser, it doesn't return `[]` when it can't find any `[ ] ( )` in the test file. `public static Map<String, List<String>> getLinks(File dirOrFile) throws IOException` doesn't return ` ` when there doesn't have any links in the test file.
+Describe the bug: For cse15lsp22-markdown-parser, it doesn't return `[]` when it can't find any `[ ] ( )` in the test file. `public static Map<String, List<String>> getLinks(File dirOrFile) throws IOException` doesn't return empty when there doesn't have any links in the test file.
 ![labreport5149bug.png](https://8yby8sd.github.io/cse15l-lab-reports/labreport5149bug.png)
