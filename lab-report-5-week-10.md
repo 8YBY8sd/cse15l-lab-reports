@@ -24,7 +24,9 @@ Here is VScode preview of the 139.md.
 
 The oupt put should be `[]`because there doesn't have any links in this file.
 
-Fix: For my-markdown-parser, it doesn't return `[]` when it can't find any `[ ] ( )` in the test file.
+Fix: For my-markdown-parser, it doesn't return `[]` when it can't find any `[ ] ( )` in the test file. It doesn't have a condition that return `[]` if there dones't have any `[ ] ( )` in the test file.
+![labreport5139bug.png](https://8yby8sd.github.io/cse15l-lab-reports/labreport5139bug.png)
 
 
 ### Test 2
+
